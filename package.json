@@ -1,0 +1,19 @@
+{
+  "name": "lwebb-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "gulp",
+    "publish": "gulp publish"
+  },
+  "author": "Logan Webb",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.37.5"
+  }
+}
