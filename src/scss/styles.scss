@@ -1,22 +1,204 @@
+@font-face {
+    font-family: "Noto Sans";
+    src: url("../res/fonts/NotoSans-Regular.ttf") format("truetype");
+}
+
 body {
     margin: 0;
 }
 
 h1 {
-    color: white;
+    font-family: "Noto Sans";
+    font-size: 2em;
 }
 
-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100vw; 
-    min-height: 100vh;
+#intro {
+
+    .video-image {
+        position: absolute;
+        background: url("../res/img/lwebb-static.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 99vw;
+        height: 100vh;
+        z-index: -1;
+    }
+    
+    .video-mask {
+        max-width: 100vw; 
+        height: 100vh;
+        background-color: rgba(9, 0, 61, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }    
+
+    h1 {
+        color: rgb(189, 180, 240);
+        padding: 1em;
+        font-weight: 400;
+    }
+    
+    .emphasize {
+        color: rgb(255, 255, 255);
+        font-weight: 700;
+    }    
 }
 
-.video-mask {
-    position: fixed;
-    min-width: 100vw; 
-    min-height: 100vh;
-    background-color: rgba(9, 0, 61, 0.7);
+
+#skills {
+    background-color: rgb(44, 44, 44);
+    max-width: 100vw; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+        color: rgb(255, 255, 255);
+        font-size: 3em;
+        letter-spacing: 3px;
+        font-weight: 700;
+    }
+
+    .skills-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+    
+        i {
+            font-size: 5em;
+            color: rgb(67, 182, 138);
+        }
+
+        h1 {
+            font-size: 2em;
+            letter-spacing: normal;
+            font-weight: 400;
+        }
+
+        ul {
+            margin-top: 0;
+
+            li {
+                font-family: "Noto Sans";
+                font-size: 1em;
+                font-weight: 400;
+                text-align: left;
+                color: rgb(255, 255, 255);
+            }    
+        }
+    }    
+}
+
+#projects {
+    background-color: rgb(71, 71, 71);
+    max-width: 100vw; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+        color: rgb(255, 255, 255);
+        font-size: 3em;
+        letter-spacing: 3px;
+        font-weight: 700;
+    }
+
+    p {
+        font-family: "Noto Sans";
+        font-size: 1em;
+        font-weight: 400;
+        color:rgb(255, 255, 255);
+    }
+}
+
+#contact {
+    background-color: rgb(44, 44, 44);
+    max-width: 100vw; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+        color: rgb(255, 255, 255);
+        font-size: 3em;
+        letter-spacing: 3px;
+        font-weight: 700;
+    }
+
+    i {
+        font-size: 5em;
+        color: rgb(189, 180, 240);
+    }
+
+    p {
+        font-family: "Noto Sans";
+        font-size: 2em;
+        font-weight: 700;
+        color:rgb(255, 255, 255);
+    }
+}
+
+#footer {
+    background-color: rgb(0, 0, 0);
+    max-width: 100vw; 
+    text-align: center;
+
+    p {
+        margin: 0;
+        padding: 1em;
+        font-family: "Noto Sans";
+        font-size: 0.75em;
+        font-weight: 700;
+        color:rgb(255, 255, 255);
+    }
+}
+
+@media (min-width: 750px) {
+
+    #intro {
+        h1 {
+            font-size: 3em;
+            padding: 3em;
+        }
+    }
+
+    #skills {
+        .skills-row {
+            display: flex;
+            flex-direction: row;
+            align-items: top;
+            justify-content: center;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+
+    #intro {
+        h1 {
+            font-size: 3em;
+            padding: 5em;
+        }
+    }
+
+    #skills {
+        .skills-row-master {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@media (min-width: 1500px) {
+
+    #intro {
+        h1 {
+            font-size: 3.5em;
+            padding: 7em;
+        }
+    }
 }

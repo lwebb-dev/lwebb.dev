@@ -24,8 +24,13 @@ function htmlPublish() {
     .pipe(gulp.dest("./dist"));
 }
 
+function resPublish() {
+    return gulp.src("./src/res/**/*")
+    .pipe(gulp.dest("./dist/res"));
+}
+
 exports.default = () => {
     watch("./src/scss/*", cssTranspile);
 }
 
-exports.publish = series(cssTranspile, parallel(cssPublish, htmlPublish));
+exports.publish = series(cssTranspile, parallel(cssPublish, htmlPublish, resPublish));
